@@ -29,27 +29,33 @@ function App() {
   return (
     <main className="App">
       <Header />
-      <div className='text-center mt-2'>
-        <h3 >
-          Quiz
-        </h3>
-      </div>
-      <div className='d-flex justify-content-center' >
-        {
-          questions.map((question)=>{
-            return(
-              <>
-              {
-                id===question.id?<><QuestionComponent id={id} score={score} setScore={setScore} setID={setID}  question={question} /></>:<></>
-              }
-              </>
-            )
-          })
-        }
-      </div>
-      <div className='text-center my-2'>
-        <div>Questions Correct : {score} of {questions?.length}</div>
-      </div>
+        <section className="section">
+          <div className="container">
+            <div className="row">
+              <div className='text-center mt-2'>
+                <h3 >
+                  Quiz
+                </h3>
+              </div>
+              <div className='d-flex justify-content-center' >
+                {
+                  questions.map((question)=>{
+                    return(
+                      <>
+                      {
+                        id===question.id?<><QuestionComponent id={id} score={score} setScore={setScore} setID={setID}  question={question} /></>:<></>
+                      }
+                      </>
+                    )
+                  })
+                }
+              </div>
+              <div className='text-center my-2'>
+                <div>Questions Correct : {score} of {questions?.length}</div>
+              </div>
+            </div>
+          </div>
+        </section>
       <Footer />
     </main>
   );
