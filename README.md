@@ -25,7 +25,7 @@ To start the project run
  
 ## Installation
 
-Install my-project with npm
+Install this project with npm
 
 ```bash
   npm install my-project
