@@ -17,7 +17,7 @@ const QuestionComponent = ({ question,score,setScore,id,setID }) => {
   return (
     <>
       <div>
-        <h5 className="my-2" >{question?.question}</h5>
+        <h5 className="text-center" >{question?.question}</h5>
         <div className='my-4 d-flex justify-content-evenly'>
           {question?.options?.map((option) => {
             return (

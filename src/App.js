@@ -32,12 +32,7 @@ function App() {
         <section className="section">
           <div className="container">
             <div className="row">
-              <div className='text-center mt-2'>
-                <h3 >
-                  Quiz
-                </h3>
-              </div>
-              <div className='d-flex justify-content-center' >
+              <div className='d-flex justify-content-center mt-4' >
                 {
                   questions.map((question)=>{
                     return(
