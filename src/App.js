@@ -1,4 +1,6 @@
 import React,{useState} from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import QuestionComponent from './QuestionComponent';
 
 function App() {
@@ -25,30 +27,31 @@ function App() {
   const [id,setID] = useState(1);
 
   return (
-   <>
-    <div className='text-center mt-2'>
-      <h3 >
-        Quiz
-      </h3>
-    </div>
-    <div className='d-flex justify-content-center' >
-      {
-        questions.map((question)=>{
-          return(
-            <>
-            {
-              id===question.id?<><QuestionComponent id={id} score={score} setScore={setScore} setID={setID}  question={question} /></>:<></>
-            }
-            </>
-          )
-        })
-      }
-    </div>
-    <div className='text-center my-2'>
-      <div>Questions Correct : {score} of {questions?.length}</div>
-    </div>
-
-   </>
+    <main className="App">
+      <Header />
+      <div className='text-center mt-2'>
+        <h3 >
+          Quiz
+        </h3>
+      </div>
+      <div className='d-flex justify-content-center' >
+        {
+          questions.map((question)=>{
+            return(
+              <>
+              {
+                id===question.id?<><QuestionComponent id={id} score={score} setScore={setScore} setID={setID}  question={question} /></>:<></>
+              }
+              </>
+            )
+          })
+        }
+      </div>
+      <div className='text-center my-2'>
+        <div>Questions Correct : {score} of {questions?.length}</div>
+      </div>
+      <Footer />
+    </main>
   );
 }
 
