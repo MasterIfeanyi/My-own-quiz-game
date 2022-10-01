@@ -1,5 +1,4 @@
 import React from "react";
-import { Flex, Text, Box, Button } from "@chakra-ui/react";
 import { useSnackbar } from "notistack";
 const QuestionComponent = ({ question,score,setScore,id,setID }) => {
     const { enqueueSnackbar } = useSnackbar();
@@ -17,16 +16,16 @@ const QuestionComponent = ({ question,score,setScore,id,setID }) => {
 
   return (
     <>
-      <Box>
-        <Text>{question?.question}</Text>
-        <Flex justify={"space-evenly"}>
+      <div>
+        <h5 className="my-2" >{question?.question}</h5>
+        <div className='my-4 d-flex justify-content-evenly'>
           {question?.options?.map((option) => {
             return (
-              <Button onClick={() => handleAns(option)}>{option}</Button>
+              <button className="btn btn-info w-28" onClick={() => handleAns(option)}>{option}</button>
             );
           })}
-        </Flex>
-      </Box>
+        </div>
+      </div>
     </>
   );
 };

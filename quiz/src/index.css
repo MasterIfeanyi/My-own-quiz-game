@@ -1,13 +1,246 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary: red;
+  --color-brand: lime;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0 0.25rem 0.25rem;
+}
+
+li {
+  list-style: none;
+}
+
+
+img {
+  width: 100%;
+  border-radius: 1000px;
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.section {
+  background-color: whitesmoke;
+  border: 1px solid blue;
+  flex: 1;
+  /* padding: 1rem 0.5rem; */
+}
+
+
+.Header {
+  padding: 1rem;
+  background-color: #007bff;
+}
+
+footer {
+  background-color: #007bff;
+  text-align: center;
+}
+
+/* custom styling */
+
+
+.text {
+  max-width: 500px;
+}
+
+.intro {
+  margin-bottom: 1rem;
+}
+
+.intro h1 {
+  font-weight: 600;
+}
+
+.font-weight{
+  font-weight: 500;
+}
+
+
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions>svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.link {
+  color: grey
+}
+
+.active {
+  color: red;
+}
+
+.line {
+  display: inline-block;
+}
+
+.form-button {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 5px #000;
+  padding: 0.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+  transition: all 0.4s ease;
+}
+
+a:hover {
+  color: var(--color-brand);
+}
+
+.tableDesign {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-family: arial;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.table thead th {
+  background-color: darkcyan;
+  color: #fff;
+}
+
+.table th,
+.table td {
+  padding: 10px 2px;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background: #eee;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid darkcyan;
+}
+
+.table-image {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  border-radius: 1000px;
+  width: 100px;
+  height: 100px;
+}
+
+.symbol {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* .table-image {
+  width: unset;
+} */
+
+.my-image{
+  width: unset;
+  height: 2rem;
+}
+
+.name-symbol {
+  vertical-align: middle;
+}
+
+
+form .form-control {
+  color: black;
+  border: black;
+  outline: none;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  background-color: #ddd;
+}
+
+form .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+  background-color: #ddd;
+  border-color: 1px solid red;
+}
+
+.input-group {
+  padding: 6px;
+  background-color: #ddd;
+  border-radius: 15px;
+}
+
+.input-group input {
+  border: black;
+  background-color: transparent;
+  color: black;
+}
+
+.input-group input:focus {
+  box-shadow: black;
+}
+
+.input-group input::placeholder{
+  color: black;
 }

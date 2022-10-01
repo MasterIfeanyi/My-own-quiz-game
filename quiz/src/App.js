@@ -1,9 +1,6 @@
 import React,{useState} from 'react';
-import {
-  Flex,
-  Text
-} from '@chakra-ui/react'
 import QuestionComponent from './QuestionComponent';
+
 function App() {
   const questions = [
     {
@@ -23,17 +20,18 @@ function App() {
       ans:"404"
     }
   ]
+
   const [score,setScore] = useState(0);
   const [id,setID] = useState(1);
 
   return (
    <>
-    <Flex justify={"center"}>
-      <Text fontSize={"1.6rem"} fontWeight={"bold"}>
+    <div className='text-center mt-2'>
+      <h3 >
         Quiz
-      </Text>
-    </Flex>
-    <Flex mx={"20%"} justify="center">
+      </h3>
+    </div>
+    <div className='d-flex justify-content-center' >
       {
         questions.map((question)=>{
           return(
@@ -45,10 +43,10 @@ function App() {
           )
         })
       }
-    </Flex>
-    <Flex justify={"center"}>
-      <Text>Questions Correct : {score} of {questions?.length}</Text>
-    </Flex>
+    </div>
+    <div className='text-center my-2'>
+      <div>Questions Correct : {score} of {questions?.length}</div>
+    </div>
 
    </>
   );
