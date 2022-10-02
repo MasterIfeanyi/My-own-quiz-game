@@ -20,7 +20,23 @@ function App() {
         "200","404","400","500"
       ],
       ans:"404"
-    }
+    },
+    {
+      id:3,
+      question:"What does the status code 403 means?",
+      options:[
+        "Not Found","Internal error","Forbidden","Success"
+      ],
+      ans:"Forbidden"
+    },
+    {
+      id:4,
+      question:"JavaScript first appear was in:",
+      options:[
+        "1979","2001","1997","1995"
+      ],
+      ans:"1995"
+    },
   ]
 
   const [score,setScore] = useState(0);
