@@ -43,6 +43,14 @@ function App() {
       ],
       ans:"1995"
     },
+    {
+      id:6,
+      question:"Which status code indicates Request is OK?",
+      options:[
+        "201","206","204","200"
+      ],
+      ans:"200"
+    },
   ]
 
   const [score,setScore] = useState(0);
