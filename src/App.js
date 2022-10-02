@@ -20,7 +20,29 @@ function App() {
         "200","404","400","500"
       ],
       ans:"404"
-    }
+    },
+    {
+      id:3,
+      question: "What does the fetch API return ?",
+      options: ["string", "promise", "number", "float"],
+      correct: "promise"
+  },
+    {
+      id:4,
+      question:"What the status code 403 means?",
+      options:[
+        "Not Found","Internal error","Forbidden","Success"
+      ],
+      ans:"Forbidden"
+    },
+    {
+      id:5,
+      question:"What year did Javascript first appear?",
+      options:[
+        "1979","2001","1997","1995"
+      ],
+      ans:"1995"
+    },
   ]
 
   const [score,setScore] = useState(0);
