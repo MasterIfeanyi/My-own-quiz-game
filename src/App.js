@@ -24,8 +24,10 @@ function App() {
     {
       id:3,
       question: "What does the fetch API return ?",
-      options: ["string", "promise", "number", "float"],
-      correct: "promise"
+      options: [
+        "string", "promise", "number", "float"
+      ],
+      ans: "promise"
   },
     {
       id:4,
@@ -42,6 +44,14 @@ function App() {
         "1979","2001","1997","1995"
       ],
       ans:"1995"
+    },
+    {
+      id:6,
+      question:"Which status code indicates Request is OK?",
+      options:[
+        "201","206","204","200"
+      ],
+      ans:"200"
     },
   ]
 
