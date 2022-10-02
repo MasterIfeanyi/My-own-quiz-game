@@ -24,8 +24,10 @@ function App() {
     {
       id:3,
       question: "What does the fetch API return ?",
-      options: ["string", "promise", "number", "float"],
-      correct: "promise"
+      options: [
+        "string", "promise", "number", "float"
+      ],
+      ans: "promise"
   },
     {
       id:4,
