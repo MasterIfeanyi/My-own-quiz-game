@@ -53,6 +53,14 @@ function App() {
       ],
       ans:"200"
     },
+    {
+      id:7,
+      question:"Javascript is an _______ language",
+      options:[
+        "Object Oriented","Object Based","Procedural","None"
+      ],
+      ans:"Object Oriented"
+    },
   ]
 
   const [score,setScore] = useState(0);
