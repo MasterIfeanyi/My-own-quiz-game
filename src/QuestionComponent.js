@@ -1,6 +1,6 @@
 import React from "react";
 import { useSnackbar } from "notistack";
-const QuestionComponent = ({ question,score,setScore,id,setID }) => {
+const QuestionComponent = ({ question,score,setScore,id,setID,negativeScore,setNegativeScore }) => {
     const { enqueueSnackbar } = useSnackbar();
   const handleAns = (option)=>{
         if(option===question.ans){
@@ -8,9 +8,9 @@ const QuestionComponent = ({ question,score,setScore,id,setID }) => {
             setScore(score + 1);
             enqueueSnackbar("Correct Answer!")
         }else{
-            setID(1);
-            setScore(0);
-            enqueueSnackbar("Restarting Quiz")
+            setID(id + 1);
+            setNegativeScore(negativeScore + 1);
+            enqueueSnackbar("Incorrect Answer!")
         }
   }
 

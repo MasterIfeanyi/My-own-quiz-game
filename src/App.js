@@ -56,6 +56,7 @@ function App() {
   ]
 
   const [score,setScore] = useState(0);
+  const [negativeScore,setNegativeScore] = useState(0);
   const [id,setID] = useState(1);
 
   return (
@@ -70,7 +71,7 @@ function App() {
                     return(
                       <>
                       {
-                        id===question.id?<><QuestionComponent id={id} score={score} setScore={setScore} setID={setID}  question={question} /></>:<></>
+                        id===question.id?<><QuestionComponent id={id} score={score} setScore={setScore} setID={setID}  question={question}  setNegativeScore={setNegativeScore} negativeScore={negativeScore}/></>:<></>
                       }
                       </>
                     )
@@ -79,6 +80,7 @@ function App() {
               </div>
               <div className='text-center my-2'>
                 <div>Questions Correct : {score} of {questions?.length}</div>
+                <div>Questions Incorrect : {negativeScore} of {questions?.length}</div>
               </div>
             </div>
           </div>
